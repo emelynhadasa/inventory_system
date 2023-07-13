@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 120%;
+    background: #F8F8FF;
+}
+  
+.header {
+    width: 30%;
+    margin: 40px auto 0px;
+    color: white;
+    background: rgb(209,57,101);
+    text-align: center;
+    border: 1px solid rgb(136,136,136);
+    border-bottom: none;
+    border-radius: 15px 15px 0px 0px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+form, .content {
+    width: 30%;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid rgb(136,136,136);
+    background: white;
+    border-radius: 0px 0px 15px 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.col {
+    margin: 10px 0px 10px 0px;
+}
+
+.col label {
+    display: block;
+    text-align: left;
+    margin: 3px;
+    margin-left: 6%;
+    padding: 4px;
+}
+
+.col input {
+    height: 35px;
+    width: 88%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 6%;
+}
+
+.col select {
+    height: 35px;
+    width: 88%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 6%;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background: rgb(209,57,101);
+    border: none;
+    border-radius: 5px;
+    margin-left: 6%;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    margin-left: 31%;
+    font-size: large;
+    color: rgb(209,57,101);
+
+}
+

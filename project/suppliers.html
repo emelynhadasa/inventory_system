@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Amerta &#124 Admin Page</title>
+		<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+        <div>
+            <span class="las la-bars"></span>
+        </div>
+
+		<nav class="sidebar">
+			<div class="sidebar-brand">
+				<table>
+                    <tr>
+                        <td><h2>AdminPage</h2></td>
+                        <td><h3 class="bar"><span class="las la-bars"></span></h3></td>
+                    </tr>
+                </table>
+			</div>
+			
+			<div class="sidebar-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="" class="active"><span class="las la-home"></span>
+                            <span>Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span class="las la-address-book"></span>
+                            <span>Suppliers</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span class="las la-clipboard-list"></span>
+                            <span>Orders</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span class="las la-box"></span>
+                            <span>Inventory</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        
+        <main>
+            <?php
+        // Konfigurasi Database
+        $host       = 'localhost'; // host
+        $username   = 'root'; // username database
+        $password   = ''; // password database
+        $dbname     = 'ProjectEquipment'; // nama database
+    
+        $db = mysqli_connect($host, $username, $password, $dbname);
+    
+        if ($db) {
+            echo "Database Terhubung";
+        } else {
+            echo "Database Error";
+        }
+        ?>
+
+        <main>
+            <table border="1" style="border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th>Material ID</th>
+                        <th>Supplier ID</th>
+                        <th>Material Name</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM suppliers";
+                    $query = mysqli_query($db, $sql);
+                    
+                    while($suppliers = mysqli_fetch_array($query)){
+                        echo "<tr>";
+                        echo "<td>".$suppliers['MaterialID']."</td>";
+                        echo "<td>".$suppliers['SupplierID']."</td>";
+                        echo "<td>".$suppliers['MaterialName']."</td>";
+                        echo "<td>".$suppliers['Stock']."</td>";
+            
+                        echo "</td>";
+
+                        echo "</tr>";
+                    }
+                    ?>
+
+                </tbody>
+        </main>
+    </body>
+</html>
